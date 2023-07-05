@@ -1,5 +1,467 @@
-template-repository (1.0-1) unstable; urgency=medium
+tix (8.4.3-11) unstable; urgency=medium
 
-  * Initial release
+  [ Ole Streicher ]
+  * d/rules: Add build_indep and build_arch targets (Closes: #998999)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Georges Khaznadar ]
+  * adopted Ole's changes before the end of the NMU's delay, thanks!
+  * created a repository in salsa.d.o to maintain the package, and
+    modified VCS stuff accordingly in debian/control
+  * upgraded... Standards-Version: 4.5.1, debhelper-compat (=13)
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 10 Jan 2022 14:01:21 +0100
+
+tix (8.4.3-10) unstable; urgency=medium
+
+  * added a symlink Tix8.4 -> Tix8.4.3, by postinst and postrm
+    scripts, which closes: #866990
+
+ -- Georges Khaznadar <georgesk@debian.org>  Wed, 12 Jul 2017 09:45:53 +0200
+
+tix (8.4.3-9) unstable; urgency=medium
+
+  * pushed to Sid
+
+ -- Georges Khaznadar <georgesk@debian.org>  Sun, 18 Jun 2017 16:54:11 +0200
+
+tix (8.4.3-8) experimental; urgency=medium
+
+  * applied cminyard's patch (published in
+    https://bugs.launchpad.net/ubuntu/+source/tix/+bug/371720).
+    Closes the bug for Ubuntu.
+  * upgraded the compat level to 9, Standards-Version to 3.9.8
+  * fixed many typos in man pages (distrobution ==> distribution)
+  * modified the descriptions (they cannot begin wit "tix")
+  * removed the line of debian/rules which introduces the unknown
+    filename "tix.tmac"
+
+ -- Georges Khaznadar <georgesk@debian.org>  Fri, 09 Jun 2017 18:02:06 +0200
+
+tix (8.4.3-7) unstable; urgency=medium
+
+  * applied Artur Rona's patch (thanks Artur!), Closes: #778859, Closes: #722847 
+
+ -- Georges Khaznadar <georgesk@debian.org>  Thu, 26 Feb 2015 04:02:31 +0100
+
+tix (8.4.3-6) unstable; urgency=medium
+
+  * upgraded Standards-Version to 3.9.6
+  * removed build-dependencies and dependencies on tcl/tk 8.5,
+    replaced them with dependencies on tcl/tk 8.6
+  * added a patch to fix "interp->result" bugs; this construct was
+    deprecated in tcl8.5 and removed from tcl8.6; however the patch is just
+    a workaround for now, since it adds "#define USE_INTERP_RESULT 1"
+    before the "#include <tcl.h>"
+  * changed the variable tk_version in debian/rules, to fit tk8.6
+  * removed Conflicts clauses about packages which no longer exist
+
+ -- Georges Khaznadar <georgesk@debian.org>  Tue, 11 Nov 2014 12:10:19 +0100
+
+tix (8.4.3-5) unstable; urgency=low
+
+  * The current version is up to date with upstream. Closes: #433661
+  * changed a dependency:instaed of dependending on tcl8.5|tclsh, the
+    new dependency is on tcl(>=8.5.0), which provides tclsh, and depends
+    in turn on tcl8.5(>=8.5.0), and in fact higher versions of tcl8.5
+    when they are taken from jessie. Closes: #725697
+  * As the current release has been downloaded from upstream in year 2010,
+    as bug #214697 has been forwarded upstream, then tagged as fixed-upstream
+    in 2008, as the original reporter did not send a working example for the
+    bug since then, this presumably Closes: #214697
+  * moved the file tix.tmac from the package tix to the package
+    tix-dev, in order to make te man macros available in the same
+    package than the manpages.
+  * wrote into debian/TODO a few hints about a fix to send to lintian
+    maintainers. The reason for it is that man macros are named tix.tmac
+    and are stored in /usr/share/groff/1.22.2/tmac, which triggers a load
+    of lintian warnings, since this path is not the usual path for groff
+    macros.
+  * reported a bug to lintian maintainers about this issue, with a patch
+    to fix it.
+  * upgraded Standards-Version to 3.9.5
+  * removed articles from descriptions in debian/control
+  * retitled the O bug in ITA. Closes: #395963
+
+ -- Georges Khaznadar <georgesk@debian.org>  Mon, 06 Jan 2014 18:17:24 +0100
+
+tix (8.4.3-4) unstable; urgency=low
+
+  * QA upload.
+  * Remove tixwish manpages (Closes: #407212)
+  * Fix permissions on /usr/share/tcltk/tcl8.5/Tix8.4.3/pref/WmDefault.tcl
+  * Rename man macros to tic.tmac
+  * Store tic.tmac in /usr/share/groff/1.20.1/tmac
+  * Remove usr/share/tcltk/tcl8.5/Tix8.4.3/license.terms
+  * Fix missing soname
+
+ -- Christophe Trophime <christophe.trophime@grenoble.cnrs.fr>  Mon, 12 Apr 2010 08:25:58 +0200
+
+tix (8.4.3-3) unstable; urgency=low
+
+  * QA upload.
+  * Switch to 3.0 (quilt) source format.
+  * Apply patch from Petr Salinger to build on kfreebsd-*. Closes: #575003.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 11 Apr 2010 19:38:00 +0200
+
+tix (8.4.3-2) unstable; urgency=low
+
+  * QA upload.
+  * Set $dir to /usr/lib in pkgIndex.tcl
+  * Move /usr/share/tix8.3 to /usr/share/tcltk/tk8.5/Tix8.4.3
+
+ -- Christophe Trophime <christophe.trophime@grenoble.cnrs.fr>  Mon, 15 Mar 2010 16:27:40 +0100
+
+tix (8.4.3-1) unstable; urgency=low
+
+  * QA upload.
+  * New upstream release
+
+  [Raphael Geissert]
+  * Fix watch file (Closes: #449786)
+
+ -- Christophe Trophime <christophe.trophime@grenoble.cnrs.fr>  Fri, 12 Mar 2010 18:02:57 +0100
+
+tix (8.4.0-7) unstable; urgency=low
+
+  * QA upload.
+  * Add ${shlibs:Depends} to tix's Depends line (Closes: #553241).
+
+ -- Matt Kraai <kraai@debian.org>  Sat, 07 Nov 2009 04:43:20 -0800
+
+tix (8.4.0-6) unstable; urgency=low
+
+  * QA upload.
+  * Install man.macros as /usr/share/tixman.macros. Fix all the manpages
+    accordingly. (Closes: #394635).
+  * Updated Standards version, to 3.7.2, no changes needed.
+  * Ack previous NMUS (Closes: #360920, #366266, #374623, #359804).
+  * Created debian/compat, at value 5.
+
+ -- Amaya Rodrigo Sastre <amaya@debian.org>  Tue, 31 Oct 2006 08:44:36 +0100
+
+tix (8.4.0-5) unstable; urgency=low
+
+  * Orphan the package.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 29 Oct 2006 02:50:16 +0200
+   
+tix (8.4.0-4.3) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Modified debian/rules to manually install missing tix.h (Closes: #360920). 
+
+ -- Michael Hanke <michael.hanke@gmail.com>  Sat, 21 Oct 2006 20:57:25 +0200
+
+tix (8.4.0-4.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Applied patch by Petr Salinger to fix shared library building on
+    GNU/kFreeBSD and GNU/Hurd (closes: #366266, #374623). 
+  * Rerun aclocal and autoconf.
+
+ -- Michael Banck <mbanck@debian.org>  Mon, 26 Jun 2006 18:49:10 +0200
+
+tix (8.4.0-4.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Hack around the TEA autoconf macros to set a proper soname for the shared
+    library. (Closes: #359804)
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sat, 10 Jun 2006 22:58:18 +0200
+
+tix (8.4.0-4) unstable; urgency=low
+
+  * Fix loading of Tix module (closes: #350816).
+
+ -- Matthias Klose <doko@debian.org>  Fri, 10 Feb 2006 15:28:01 +0100
+
+tix (8.4.0-3) unstable; urgency=low
+
+  * Remove more debugging cruft (closes: #344657).
+
+ -- Matthias Klose <doko@debian.org>  Fri, 30 Dec 2005 00:29:59 +0100
+
+tix (8.4.0-2) unstable; urgency=low
+
+  * debian/rules: Fix typo (closes: #344657).
+
+ -- Matthias Klose <doko@debian.org>  Sat, 24 Dec 2005 14:21:41 +0100
+
+tix (8.4.0-1) unstable; urgency=low
+
+  * Rename as tix-8.4.0.
+  * tclinclude/tcl.m4: Fix syntax error (closes: #343990).
+  * Remove version information from package description (closes: #335673).
+
+ -- Matthias Klose <doko@debian.org>  Sat, 24 Dec 2005 01:22:04 +0000
+
+tix (8.4-2) unstable; urgency=low
+
+  * Fix FTBFS on GNU/Hurd and GNU/kFreeBSD (closes: #335257).
+
+ -- Matthias Klose <doko@debian.org>  Sun, 23 Oct 2005 12:46:43 +0000
+
+tix (8.4-1) unstable; urgency=low
+
+  * New upstream version.
+  * Rename from tix8.1 to tix.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 14 Oct 2005 20:37:03 +0200
+
+tix8.1 (8.1.4-8) unstable; urgency=low 
+ 
+  * Honor DEB_BUILD_OPTIONS (Andrew Pollock). Closes: #281021.
+ 
+ -- Matthias Klose <doko@debian.org>  Sat, 13 Nov 2004 18:45:19 +0100
+
+tix8.1 (8.1.4-7) unstable; urgency=low
+
+  * Add watch file.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 19 Sep 2004 20:16:46 +0200
+
+tix8.1 (8.1.4-6) unstable; urgency=low
+
+  * Fix tixConfig.sh (closes: #226176).
+
+ -- Matthias Klose <doko@debian.org>  Thu, 15 Jan 2004 17:37:18 +0100
+
+tix8.1 (8.1.4-5) unstable; urgency=low
+
+  * Include tixConfig.sh in tix8.1-dev package (closes: #226176).
+
+ -- Matthias Klose <doko@debian.org>  Mon, 12 Jan 2004 21:56:18 +0100
+
+tix8.1 (8.1.4-4) unstable; urgency=low
+
+  * Add patch to fix crash in tixGrid (closes: #132731).
+
+ -- Matthias Klose <doko@debian.org>  Wed, 10 Dec 2003 08:46:50 +0100
+
+tix8.1 (8.1.4-3) unstable; urgency=low
+
+  * Update standard version.
+  * Add man page for tixindex (closes: #214055).
+
+ -- Matthias Klose <doko@debian.org>  Wed, 15 Oct 2003 22:37:47 +0200
+
+tix8.1 (8.1.4-2) unstable; urgency=low
+
+  * Update package description (closes: #209893).
+
+ -- Matthias Klose <doko@debian.org>  Fri, 26 Sep 2003 11:18:51 +0200
+
+tix8.1 (8.1.4-1) unstable; urgency=low
+
+  * New upstream version.
+  * Include static libraries in -dev package (closes: #167634).
+
+ -- Matthias Klose <doko@debian.org>  Wed, 18 Dec 2002 09:58:43 +0100
+
+tix8.1 (8.1.3.93-2) unstable; urgency=low
+
+  * Reference '.so.1' library names in pkgIndex.tcl (closes: #172235).
+
+ -- Matthias Klose <doko@debian.org>  Mon,  9 Dec 2002 07:32:05 +0100
+
+tix8.1 (8.1.3.93-1) unstable; urgency=low
+
+  * New upstream release (tix-8.1.4 release candidate 3).
+  * Depend on tk8.4.
+  * Add docs/licens.html_lib to debian/copyright.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 19 Nov 2002 08:45:05 +0100
+
+tix8.1 (8.1.3-1) unstable; urgency=low
+
+  * New upstream version (closes: #100085).
+    Needed to support Tix in Python.
+  * Fix package loading (addresses #119710, #152365).
+  * debian/copyright: Updated.
+  * Converted rules file to use debhelper.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 24 Aug 2002 09:06:01 +0200
+
+tix41 (4.1.0.7-4.1) unstable; urgency=low
+
+  * Bugsquash party NMU.
+  * Make configure script executable before trying to execute it
+    (closes: #75389, #75617).
+  * Add build-dependencies and bump the policy version to 3.1.1.
+  * Strip binaries properly (lintian).
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 24 Feb 2001 11:53:18 +0000
+
+tix41 (4.1.0.7-4) unstable; urgency=low
+
+  * Compiled with tcl/tk 8.3
+  * generic/tixInit.c: fixed crashing initscript
+  * adopted by Eray Ozkural (closes: #74531)
+
+ -- Eray Ozkural <erayo@cs.bilkent.edu.tr>  Sun, 15 Oct 2000 20:13:32 +0300
+
+tix41 (4.1.0.7-3) unstable; urgency=low
+
+  * Orphaned package.
+
+ -- Philippe Troin <phil@fifi.org>  Thu, 28 Sep 2000 00:34:56 +0300
+
+tix41 (4.1.0.7-2) unstable; urgency=low
+
+  * Fixed bad update-alternatives in /usr/man (moved to /usr/share/man).
+
+ -- Philippe Troin <phil@fifi.org>  Tue, 19 Oct 1999 16:15:01 -0700
+
+tix41 (4.1.0.7-1) unstable; urgency=low
+
+  * New upstream version.
+  * FHS compliant.
+  * Lintian clean.
+  * Updated for new tcl layout.
+  * New standards-revision 3.0.1.
+
+ -- Philippe Troin <phil@fifi.org>  Mon, 18 Oct 1999 23:35:52 -0700
+
+tix41 (4.1.0.6-7) unstable; urgency=low
+
+  * Now autodetects if used with the new tcl/tk or old ones for building
+    purposes, fixes bug #27885.
+
+ -- Philippe Troin <phil@fifi.org>  Thu, 15 Oct 1998 21:47:12 -0700
+
+tix41 (4.1.0.6-6) unstable; urgency=low
+
+  * Bad configure.in error message, fixes bug #27489.
+
+ -- Philippe Troin <phil@fifi.org>  Tue,  6 Oct 1998 23:53:20 -0700
+
+tix41 (4.1.0.6-5) unstable; urgency=low
+
+  * Added compatibility link for old soname (libtix.so.4.1)i, fixes bugs
+    #27179, #27202.
+  * Changes for standalone build (requires tcl8.0-dev, tk8.0-dev >=
+    8.0.3-1.1), fixes bug #23381.
+
+ -- Philippe Troin <phil@fifi.org>  Tue, 29 Sep 1998 02:12:58 -0700
+
+tix41 (4.1.0.6-4) unstable; urgency=low
+
+  * Typos in description (fixes bug #19014, #26856).
+  * Now builds with official ugly soname (fixes bug #21175).
+
+ -- Philippe Troin <phil@fifi.org>  Mon, 21 Sep 1998 00:34:05 -0700
+
+tix41 (4.1.0.6-3) unstable; urgency=low
+
+  * Moved demos to /usr/doc/tix41/examples (fixes bug #17793).
+  * Updated to Standards-Version 2.4.0.0.
+
+ -- Philippe Troin <phil@fifi.org>  Wed,  4 Feb 1998 23:16:33 -0800
+
+tix41 (4.1.0.6-2) unstable; urgency=low
+
+  * Recompiled with tcl/tk 8.0p2 (fixes bug #16300).
+  * Moved include file from /usr/include/tcl to /usr/include (fixes
+    #16238).
+  * Added explicit dependencies to shared library (fixes bug #16562).
+  * Shared lib is no more executable. Tix41 is now standards-version
+    2.3.0.1.
+  * Fixed copyright.
+  * Added depends to tcl8.0-dev tk8.0-dev and libc6-dev to tix41-dev
+    dependencies.
+  * Static library is now stripped with --strip-debug.
+
+ -- Philippe Troin <phil@fifi.org>  Sun, 18 Jan 1998 21:53:35 -0800
+
+tix41 (4.1.0.6-1) unstable; urgency=low
+
+  * Libc6 compilation.
+  * Now links against tcl/tk 8.0.
+
+ -- Philippe Troin <phil@fifi.org>  Sun, 28 Sep 1997 19:58:46 -0700
+
+tix41 (4.1.0.5-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Philippe Troin <phil@fifi.org>  Sun, 29 Jun 1997 19:28:41 -0700
+
+tix41 (4.1.0.4-2) unstable; urgency=low
+
+  * Fixed the zero-length MkManag.tcl file in the demo which broke
+    /usr/lib/tix4.1/demos/widget. Reported upstream.
+
+ -- Philippe Troin <phil@fifi.org>  Sat, 21 Jun 1997 20:18:42 -0700
+
+tix41 (4.1.0.4-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Philippe Troin <phil@fifi.org>  Sat, 21 Jun 1997 18:36:58 -0700
+
+tix41 (4.1.0.1-1) unstable frozen; urgency=low
+
+  * New upstream version. This patch fixes several problems in 4.1.0, and
+    should be included in frozen.
+  * Removed a "puts hi" in library/OptMenu.tcl.
+
+ -- Philippe Troin <phil@fifi.org>  Thu, 10 Apr 1997 17:19:25 -0700
+
+tix41 (4.1.0-1) unstable; urgency=low
+
+  * Re-debianized (Makefiles changed once again).
+  * Removed references to BETA software in the control file.
+
+ -- Philippe Troin <phil@fifi.org>  Mon, 17 Mar 1997 22:34:51 -0800
+
+tix41 (4.1b2-2) unstable; urgency=low
+
+  * Uses -D_REENTRANT for the libraries.
+  * Now compiles with Tcl 7.6 and Tk 4.2.
+  * Runtime package and sources now go into section libs.
+  * Added a warning in the control file's description.
+  * Removed all the external entries in shlibs.local (libtix remains
+    obviously).
+
+ -- Philippe Troin <phil@fifi.org>  Sat, 25 Jan 1997 20:57:10 -0800
+
+tix41 (4.1b2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Fixed some stuff in the Makefile.ins.
+  * Changed /sbin/ldconfig into ldconfig in conffiles (closes bugs #6161,
+    #6163, #6164 and #6173).
+
+ -- Philippe Troin <phil@fifi.org>  Wed, 8 Jan 1997 20:16:57 -0800
+
+tix41 (4.1b1-4) frozen unstable; urgency=low
+
+  * Changed all the version information to refer to 4.1.b1 instead of
+    4.1b1 to get a consistent soname.
+
+ -- Philippe Troin <phil@fifi.org>  Fri, 15 Nov 1996 01:16:58 -0800
+
+tix41 (4.1b1-3) unstable; urgency=low
+
+  * Compressed man pages.
+
+ -- Philippe Troin <phil@fifi.org>  Sun, 3 Nov 1996 16:07:18 -0800
+
+tix41 (4.1b1-2) unstable; urgency=low
+
+  * Stripped shared library.
+  * Now removes substvars during the clean.
+
+ -- Philippe Troin <phil@fifi.org>  Sun, 27 Oct 1996 13:33:43 -0800
+
+tix41 (4.1b1-1) unstable; urgency=low
+
+  * Debianized Tix.
+  * Changed unix-tk4.1/Makefile.in to build shlib with soname.
+  * Fixed top-level Makefile (would loop endlessly).
+  * Fixed unix-tk4.1/Makefile.in: would install twice the static tixwish.
+
+ -- Philippe Troin <phil@fifi.org>  Sun, 20 Oct 1996 16:00:00 -0700
+
+

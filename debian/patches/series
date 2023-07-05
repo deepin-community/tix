@@ -1,0 +1,5 @@
+01-fix-ftbfs-on-kfreebsd
+02-autoconf
+10-fixInterpResult.patch
+15-fix_pkgIndex.patch
+20-fix-man-typos.patch
