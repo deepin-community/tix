@@ -1,0 +1,24 @@
+Index: tix-8.4.3/generic/tixInit.c
+===================================================================
+--- tix-8.4.3.orig/generic/tixInit.c
++++ tix-8.4.3/generic/tixInit.c
+@@ -212,7 +212,7 @@ static char initScript[] = "if {[info pr
+   proc tixInit {} {\n\
+     global tix_library tix_version tix_patchLevel\n\
+     rename tixInit {}\n\
+-    tcl_findLibrary Tix $tix_patchLevel $tix_patchLevel Init.tcl TIX_LIBRARY tix_library\n\
++    tcl_findLibrary Tix $tix_version $tix_patchLevel Init.tcl TIX_LIBRARY tix_library\n\
+   }\n\
+ }\n\
+ tixInit";
+--- tix-8.4.3.orig/Makefile.in
++++ tix-8.4.3/Makefile.in
+@@ -296,7 +296,7 @@ pkgIndex.tcl:
+ 	(\
+ 	echo 'if {[catch {package require Tcl 8.4}]} return';\
+ 	echo 'package ifneeded $(PACKAGE_NAME) $(PACKAGE_VERSION) \
+-	    [list load [file join $$dir $(PKG_LIB_FILE)] $(PACKAGE_NAME)]'\
++	    [list load [file join ${libdir} $(PKG_LIB_FILE)] $(PACKAGE_NAME)]'\
+ 	) > pkgIndex.tcl
+ 
+ #========================================================================

@@ -1,0 +1,14 @@
+From: Petr Salinger <Petr.Salinger@seznam.cz>
+Subject: fix FTBFS on kfreebsd-*
+
+--- a/tclconfig/tcl.m4
++++ b/tclconfig/tcl.m4
+@@ -1440,7 +1440,7 @@
+ 	        fi
+ 	    fi
+ 	    ;;
+-	Linux*)
++	Linux*|GNU*)
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD_LIBS='${LIBS}'
+ 	    SHLIB_SUFFIX=".so"

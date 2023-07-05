@@ -1,0 +1,681 @@
+Index: tix-8.4.3/man/TixIntro.n
+===================================================================
+--- tix-8.4.3.orig/man/TixIntro.n
++++ tix-8.4.3/man/TixIntro.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ .TH TixIntro n 8.0 Tix "Tix Built-In Commands"
+Index: tix-8.4.3/man/compound.n
+===================================================================
+--- tix-8.4.3.orig/man/compound.n
++++ tix-8.4.3/man/compound.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ .TH compound n 4.0 Tix "Tix Built-In Commands"
+Index: tix-8.4.3/man/pixmap.n
+===================================================================
+--- tix-8.4.3.orig/man/pixmap.n
++++ tix-8.4.3/man/pixmap.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ .TH pixmap n 4.0 Tix "Tix Built-In Commands"
+Index: tix-8.4.3/man/tix.n
+===================================================================
+--- tix-8.4.3.orig/man/tix.n
++++ tix-8.4.3/man/tix.n
+@@ -10,7 +10,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ .TH tix n 8.4 Tix "Tix Built-In Commands"
+@@ -104,7 +104,7 @@ getimage\fR and \fBtix getbitmap\fR comm
+ files. The standard bitmap directory is
+ \fB$TIX_LIBRARY/bitmaps\fR. The \fBaddbitmapdir\fR command adds
+ \fIdirectory\fR into this list. By using this command, the image files
+-of an applications can also be located using the \fBtix getimage\fR ot
++of an applications can also be located using the \fBtix getimage\fR or
+ \fBtix getbitmap\fR command.
+ '\"
+ .TP
+Index: tix-8.4.3/man/tixBalloon.n
+===================================================================
+--- tix-8.4.3.orig/man/tixBalloon.n
++++ tix-8.4.3/man/tixBalloon.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixButtonBox.n
+===================================================================
+--- tix-8.4.3.orig/man/tixButtonBox.n
++++ tix-8.4.3/man/tixButtonBox.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixCheckList.n
+===================================================================
+--- tix-8.4.3.orig/man/tixCheckList.n
++++ tix-8.4.3/man/tixCheckList.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+@@ -139,9 +139,9 @@ status (see below).
+ '\"
+ .PP
+ Notice that CheckList is a subclass of the TixTree widget and thus is
+-is capable of displaying a hierachy of selectable entries. When
++is capable of displaying a hierarchy of selectable entries. When
+ necessary, you can call the \fBsetmode\fR method (see
+-\fBTixTree(n)\fR) to define the hierachical structure of the
++\fBTixTree(n)\fR) to define the hierarchical structure of the
+ selectable entries.
+ '\"
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixComboBox.n
+===================================================================
+--- tix-8.4.3.orig/man/tixComboBox.n
++++ tix-8.4.3/man/tixComboBox.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+@@ -403,7 +403,7 @@ Insert the \fI string\fR into the listbo
+ \fIpathName \fBpick \fIindex\fR 
+ Set the (\fIindex\fR)th item in the listbox to be the current value of
+ the ComboBox. As a result, the \fIvalue\fR of the ComboBox is changed
+-and the TCL command sepcified by the \fI\-command\fR option will be
++and the TCL command specified by the \fI\-command\fR option will be
+ called.
+ '\"
+ .TP
+Index: tix-8.4.3/man/tixControl.n
+===================================================================
+--- tix-8.4.3.orig/man/tixControl.n
++++ tix-8.4.3/man/tixControl.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixDestroy.n
+===================================================================
+--- tix-8.4.3.orig/man/tixDestroy.n
++++ tix-8.4.3/man/tixDestroy.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ .TH tixDestroy n 4.0 Tix "Tix Built-In Commands"
+Index: tix-8.4.3/man/tixDirList.n
+===================================================================
+--- tix-8.4.3.orig/man/tixDirList.n
++++ tix-8.4.3/man/tixDirList.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixDirSelectDialog.n
+===================================================================
+--- tix-8.4.3.orig/man/tixDirSelectDialog.n
++++ tix-8.4.3/man/tixDirSelectDialog.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixDirTree.n
+===================================================================
+--- tix-8.4.3.orig/man/tixDirTree.n
++++ tix-8.4.3/man/tixDirTree.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixDisplayStyle.n
+===================================================================
+--- tix-8.4.3.orig/man/tixDisplayStyle.n
++++ tix-8.4.3/man/tixDisplayStyle.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixExFileSelectBox.n
+===================================================================
+--- tix-8.4.3.orig/man/tixExFileSelectBox.n
++++ tix-8.4.3/man/tixExFileSelectBox.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixExFileSelectDialog.n
+===================================================================
+--- tix-8.4.3.orig/man/tixExFileSelectDialog.n
++++ tix-8.4.3/man/tixExFileSelectDialog.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixFileEntry.n
+===================================================================
+--- tix-8.4.3.orig/man/tixFileEntry.n
++++ tix-8.4.3/man/tixFileEntry.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixFileSelectBox.n
+===================================================================
+--- tix-8.4.3.orig/man/tixFileSelectBox.n
++++ tix-8.4.3/man/tixFileSelectBox.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+@@ -196,7 +196,7 @@ any of the values accepted by the \fBtix
+ \fIpathName \fBfilter\fR
+ '\"
+ Updates the files listed in the FileSelectBox according to the
+-filtering pattern sepcified in the \fBfilter\fR subwidget.
++filtering pattern specified in the \fBfilter\fR subwidget.
+ .TP
+ \fIpathName \fBinvoke\fR
+ Execute the command specified by the \fB\-command\fR option with the
+Index: tix-8.4.3/man/tixFileSelectDialog.n
+===================================================================
+--- tix-8.4.3.orig/man/tixFileSelectDialog.n
++++ tix-8.4.3/man/tixFileSelectDialog.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixForm.n
+===================================================================
+--- tix-8.4.3.orig/man/tixForm.n
++++ tix-8.4.3/man/tixForm.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixGetBoolean.n
+===================================================================
+--- tix-8.4.3.orig/man/tixGetBoolean.n
++++ tix-8.4.3/man/tixGetBoolean.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixGetInt.n
+===================================================================
+--- tix-8.4.3.orig/man/tixGetInt.n
++++ tix-8.4.3/man/tixGetInt.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixGrid.n
+===================================================================
+--- tix-8.4.3.orig/man/tixGrid.n
++++ tix-8.4.3/man/tixGrid.n
+@@ -10,7 +10,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ .TH tixGrid n 4.1 Tix "Tix Built-In Commands"
+@@ -188,7 +188,7 @@ When no \fIoption\fR-\fIvalue\fR pair is
+ list containing the current size setting of the given row (or
+ column). When \fIoption\fR-\fIvalue\fR pairs are given, the
+ corresponding options of the size setting of the given row are
+-changed. \fIOption\fR may be one of the follwing:
++changed. \fIOption\fR may be one of the following:
+ .RS
+ .TP
+ \fB-pad0\fR \fIpixels\fR
+Index: tix-8.4.3/man/tixHList.n
+===================================================================
+--- tix-8.4.3.orig/man/tixHList.n
++++ tix-8.4.3/man/tixHList.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+@@ -175,7 +175,7 @@ bars when needed" features.
+ '\"----------BEGIN
+ .OP \-separator separator Separator
+ Specifies the character to used as the separator character when
+-intepreting the path-names of list entries. By default the character
++interpreting the path-names of list entries. By default the character
+ "." is used.
+ '\"----------END
+ '\"
+@@ -200,15 +200,15 @@ HList widget such as its cursor and reli
+ The HList widget can be used to display any data that have a
+ hierarchical structure, for example, file system directory trees. The
+ list entries are indented and connected by branch lines according to
+-their places in the hierachy.
++their places in the hierarchy.
+ .PP
+ Each list entry is identified by an \fBentryPath\fR. The entryPath is a
+-sequence of \fBentry names\fR separated by the separator charactor
++sequence of \fBentry names\fR separated by the separator character
+ (specified by the \fB\-separator\fR option). An \fBentry name\fR can be
+-any string that does not contain the separator charactor, or it can be
+-the a string that contains only one separator charactor.
++any string that does not contain the separator character, or it can be
++the a string that contains only one separator character.
+ .PP
+-For example, when "." is used as the separator charactor,
++For example, when "." is used as the separator character,
+ "one.two.three" is the entryPath for a list entry whose parent is
+ "one.two", whose parent is "one", which is a toplevel entry (has no
+ parents).
+Index: tix-8.4.3/man/tixInputOnly.n
+===================================================================
+--- tix-8.4.3.orig/man/tixInputOnly.n
++++ tix-8.4.3/man/tixInputOnly.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ .TH tixInputOnly n 4.0 Tix "Tix Built-In Commands"
+Index: tix-8.4.3/man/tixLabelEntry.n
+===================================================================
+--- tix-8.4.3.orig/man/tixLabelEntry.n
++++ tix-8.4.3/man/tixLabelEntry.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixLabelFrame.n
+===================================================================
+--- tix-8.4.3.orig/man/tixLabelFrame.n
++++ tix-8.4.3/man/tixLabelFrame.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixListNoteBook.n
+===================================================================
+--- tix-8.4.3.orig/man/tixListNoteBook.n
++++ tix-8.4.3/man/tixListNoteBook.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixMeter.n
+===================================================================
+--- tix-8.4.3.orig/man/tixMeter.n
++++ tix-8.4.3/man/tixMeter.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixMwm.n
+===================================================================
+--- tix-8.4.3.orig/man/tixMwm.n
++++ tix-8.4.3/man/tixMwm.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+@@ -72,7 +72,7 @@ Add a new mwm protocol message for this
+ message is identified by the string name specified in
+ \fIprotocol_name\fR. A menu item will be added into mwm's menu as
+ specified by \fImenu_message\fR. Once a new mwm protocol message is
+-added to a toplevel, it can be catched by the TK \fBwm protocol\fR
++added to a toplevel, it can be caught by the TK \fBwm protocol\fR
+ command. Here is an example:
+ .CS
+ tixMwm protocol . add MY_PRINT_HELLO \\
+Index: tix-8.4.3/man/tixNBFrame.n
+===================================================================
+--- tix-8.4.3.orig/man/tixNBFrame.n
++++ tix-8.4.3/man/tixNBFrame.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixNoteBook.n
+===================================================================
+--- tix-8.4.3.orig/man/tixNoteBook.n
++++ tix-8.4.3/man/tixNoteBook.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixOptionMenu.n
+===================================================================
+--- tix-8.4.3.orig/man/tixOptionMenu.n
++++ tix-8.4.3/man/tixOptionMenu.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixPanedWindow.n
+===================================================================
+--- tix-8.4.3.orig/man/tixPanedWindow.n
++++ tix-8.4.3/man/tixPanedWindow.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixPopupMenu.n
+===================================================================
+--- tix-8.4.3.orig/man/tixPopupMenu.n
++++ tix-8.4.3/man/tixPopupMenu.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixScrolledHList.n
+===================================================================
+--- tix-8.4.3.orig/man/tixScrolledHList.n
++++ tix-8.4.3/man/tixScrolledHList.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixScrolledListBox.n
+===================================================================
+--- tix-8.4.3.orig/man/tixScrolledListBox.n
++++ tix-8.4.3/man/tixScrolledListBox.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixScrolledText.n
+===================================================================
+--- tix-8.4.3.orig/man/tixScrolledText.n
++++ tix-8.4.3/man/tixScrolledText.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixScrolledWindow.n
+===================================================================
+--- tix-8.4.3.orig/man/tixScrolledWindow.n
++++ tix-8.4.3/man/tixScrolledWindow.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixSelect.n
+===================================================================
+--- tix-8.4.3.orig/man/tixSelect.n
++++ tix-8.4.3/man/tixSelect.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixStdButtonBox.n
+===================================================================
+--- tix-8.4.3.orig/man/tixStdButtonBox.n
++++ tix-8.4.3/man/tixStdButtonBox.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixTList.n
+===================================================================
+--- tix-8.4.3.orig/man/tixTList.n
++++ tix-8.4.3/man/tixTList.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixTree.n
+===================================================================
+--- tix-8.4.3.orig/man/tixTree.n
++++ tix-8.4.3/man/tixTree.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+@@ -139,7 +139,7 @@ options, described above, may be specifi
+ the option database to configure aspects of the Tree widget such as its
+ cursor and relief.
+ .PP
+-The Tree widget can be used to display hierachical data in a tree
++The Tree widget can be used to display hierarchical data in a tree
+ form. The user can adjust the view of the tree by opening or closing
+ parts of the tree.
+ .PP
+Index: tix-8.4.3/man/tixUtils.n
+===================================================================
+--- tix-8.4.3.orig/man/tixUtils.n
++++ tix-8.4.3/man/tixUtils.n
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ '\"----------------------------------------------------------------------
+Index: tix-8.4.3/man/tixwish.1
+===================================================================
+--- tix-8.4.3.orig/man/tixwish.1
++++ tix-8.4.3/man/tixwish.1
+@@ -11,7 +11,7 @@
+ '\" The file man.macros and some of the macros used by this file are
+ '\" copyrighted: (c) 1990 The Regents of the University of California.
+ '\"              (c) 1994-1995 Sun Microsystems, Inc.
+-'\" The license terms of the Tcl/Tk distrobution are in the file
++'\" The license terms of the Tcl/Tk distribution are in the file
+ '\" license.tcl.
+ .so man.macros
+ .TH tixwish 1 8.0 Tix "Tix Applications"
